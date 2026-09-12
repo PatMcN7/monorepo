@@ -120,7 +120,7 @@ void bms_task(void);
 
 // Thread Defines
 DEFINE_CAN_TASKS();
-RTOS_DEFINE_TASK(bms_task, 200, TASK_PRIORITY_NORMAL, STACK_2048);
+RTOS_DEFINE_TASK(bms_task, BMS_PERIOD_MS, TASK_PRIORITY_NORMAL, STACK_2048);
 RTOS_DEFINE_TASK(charging_fsm_periodic, ELCON_COMMAND_PERIOD_MS, TASK_PRIORITY_NORMAL, STACK_512);
 RTOS_DEFINE_TASK(fault_library_periodic, A_BOX_FAULT_SYNC_PERIOD_MS, TASK_PRIORITY_NORMAL, STACK_1024);
 RTOS_DEFINE_TASK(report_telemetry_100hz, TELEMETRY_100HZ_PERIOD_MS, TASK_PRIORITY_LOW, STACK_512);
@@ -175,6 +175,10 @@ int main(void) {
     return 0;
 }
 
+static_assert(PACK_BMS_PERIOD_MS == BMS_PERIOD_MS);
+static_assert(PACK_BMS_CCAN_PERIOD_MS == BMS_PERIOD_MS);
+static_assert(BMS_PECS_PERIOD_MS == BMS_PERIOD_MS);
+static_assert(BMS_PECS_CCAN_PERIOD_MS == BMS_PERIOD_MS);
 void bms_task(void) {
     // IMD
     bool imd_faulted = PHAL_GPIO_read(IMD_STATUS_PORT, IMD_STATUS_PIN) == false;

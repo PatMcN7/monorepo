@@ -90,6 +90,7 @@ void report_telemetry_100hz(void) {
  * Includes: Thermal stats
  */
 static_assert(THERMISTOR_TELEMETRY_PERIOD_MS == TELEMETRY_8HZ_PERIOD_MS);
+static_assert(THERMISTOR_TELEMETRY_CCAN_PERIOD_MS == TELEMETRY_8HZ_PERIOD_MS);
 void report_telemetry_8hz(void) {
     // Report thermistor temperatures one at a time
     static uint8_t module_num      = 0;
