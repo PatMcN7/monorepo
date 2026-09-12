@@ -41,6 +41,18 @@
         },
         {
             "message_name": "pack_bms_ccan"
+        },
+        {
+            "message_name": "pack_analog_ccan"
+        },
+        {
+            "message_name": "cell_telemetry_ccan"
+        },
+        {
+            "message_name": "bms_pecs_ccan"
+        },
+        {
+            "message_name": "thermistor_telemetry_ccan"
         }
     ]
 }
