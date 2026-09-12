@@ -106,7 +106,7 @@ static inline void update_bangbang(void) {
         // force on
         bangbang_update(&battery_fans, BATTERY_FAN_UPPER_LIMIT + 1, now);
     } else {
-        int16_t max_temp = can_data.pack_bms.max_temp;
+        uint8_t max_temp = can_data.pack_bms.max_temp;
         bangbang_update(&battery_fans, max_temp, now);
     }
 
