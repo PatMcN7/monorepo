@@ -63,7 +63,7 @@ impl BatteryVoltage {
     pub fn handle_can_message(&mut self, msg: &messages::MsgFromCan) {
         if let messages::MsgFromCan::ParsedMessage(parsed) = msg {
             match parsed.decoded.name.as_str() {
-                "cell_telemetry" => {
+                "cell_telemetry" | "cell_telemetry_ccan" => {
                     let mut module_num: Option<usize> = None;
                     let mut cell_num: Option<usize> = None;
                     let mut voltage: Option<f64> = None;
@@ -96,15 +96,11 @@ impl BatteryVoltage {
                         self.ui_state.mark_updated();
                     }
                 }
-                "charging_telemetry" => {
+                "pack_bms" | "pack_bms_ccan" => {
                     for (_, sig) in parsed.decoded.signals.iter() {
                         match sig.name.as_str() {
                             "pack_voltage" => {
                                 self.charging_telemetry.get_or_insert_default().pack_voltage =
-                                    sig.value.physical;
-                            }
-                            "pack_current" => {
-                                self.charging_telemetry.get_or_insert_default().pack_current =
                                     sig.value.physical;
                             }
                             "min_cell_voltage" => {
@@ -118,6 +114,16 @@ impl BatteryVoltage {
                                     .max_cell_voltage = sig.value.physical;
                             }
                             _ => {}
+                        }
+                    }
+
+                    self.ui_state.mark_updated();
+                }
+                "pack_analog" | "pack_analog_ccan" => {
+                    for (_, sig) in parsed.decoded.signals.iter() {
+                        if sig.name.as_str() == "pack_current" {
+                            self.charging_telemetry.get_or_insert_default().pack_current =
+                                sig.value.physical;
                         }
                     }
 
