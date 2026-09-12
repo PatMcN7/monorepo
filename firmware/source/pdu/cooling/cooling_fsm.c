@@ -102,11 +102,11 @@ static inline void update_bangbang(void) {
         bangbang_update(&powertrain_pumps, higher_temp, now);
     }
 
-    if (can_data.pack_stats.is_stale()) {
+    if (can_data.pack_bms.is_stale()) {
         // force on
         bangbang_update(&battery_fans, BATTERY_FAN_UPPER_LIMIT + 1, now);
     } else {
-        int16_t max_temp = can_data.pack_stats.max_temp;
+        int16_t max_temp = can_data.pack_bms.max_temp;
         bangbang_update(&battery_fans, max_temp, now);
     }
 

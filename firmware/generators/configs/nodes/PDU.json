@@ -245,7 +245,7 @@
                     "message_name": "igbt_temps"
                 },
                 {
-                    "message_name": "pack_stats"
+                    "message_name": "pack_bms"
                 }
             ]
         }

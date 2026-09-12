@@ -183,6 +183,14 @@ void bms_task(void) {
     // ADBMS
     adbms_periodic(&g_bms, MIN_V_FOR_BALANCE, MIN_DELTA_FOR_BALANCE);
 
+    uint16_t pack_voltage = (uint16_t)(g_bms.sum_voltage * PACK_COEFF_PACK_ANALOG_PACK_VOLTAGE);
+    uint16_t min_cell_voltage = (uint16_t)(g_bms.min_voltage * PACK_COEFF_PACK_BMS_MIN_CELL_VOLTAGE);
+    uint16_t max_cell_voltage = (uint16_t)(g_bms.max_voltage * PACK_COEFF_PACK_BMS_MAX_CELL_VOLTAGE);
+    uint8_t max_temp = (uint8_t)(g_bms.max_therm_temp);
+    uint8_t avg_temp = (uint8_t)(g_bms.avg_therm_temp);
+    CAN_SEND_pack_bms(pack_voltage, min_cell_voltage, max_cell_voltage, max_temp, avg_temp);
+    CAN_SEND_pack_bms_ccan(pack_voltage, min_cell_voltage, max_cell_voltage, max_temp, avg_temp);
+
     bool is_bms_disconnected = g_bms.state != ADBMS_STATE_CONNECTED;
     update_fault(FAULT_ID_BMS_DISCONNECTED, is_bms_disconnected);
     PHAL_GPIO_write(BMS_SDC_CTRL_PORT, BMS_SDC_CTRL_PIN, is_clear(FAULT_ID_BMS_DISCONNECTED));

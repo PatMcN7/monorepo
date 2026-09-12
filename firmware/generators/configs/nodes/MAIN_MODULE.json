@@ -282,7 +282,7 @@
                     "message_name": "vcu_torque_request"
                 },
                 {
-                    "message_name": "pack_stats"
+                    "message_name": "pack_bms"
                 }
             ]
         },

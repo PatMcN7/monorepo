@@ -40,7 +40,7 @@
             "message_name": "elcon_status"
         },
         {
-            "message_name": "charging_telemetry"
+            "message_name": "pack_bms_ccan"
         }
     ]
 }

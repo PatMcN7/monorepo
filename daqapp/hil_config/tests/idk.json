@@ -7,11 +7,10 @@
 	"tx": [
 		{
 			"timestamp": 15,
-			"msg_name": "pack_stats",
+			"msg_name": "pack_analog",
 			"signals": {
 				"pack_voltage": 540.0,
-				"pack_current": 10.0,
-				"max_temp": 35.0
+				"pack_current": 10.0
 			}
 		}
 	],
