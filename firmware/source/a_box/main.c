@@ -19,6 +19,7 @@
 #include "common/phal_G4/gpio/gpio.h"
 #include "common/phal_G4/rcc/rcc.h"
 #include "common/phal_G4/pin_defs/g474ret6.h"
+#include "common/utils/clamp.h"
 
 /* Module Includes */
 #include "adbms.h"
@@ -191,8 +192,8 @@ void bms_task(void) {
     uint16_t pack_voltage = (uint16_t)(g_bms.sum_voltage * PACK_COEFF_PACK_BMS_PACK_VOLTAGE);
     uint16_t min_cell_voltage = (uint16_t)(g_bms.min_voltage * PACK_COEFF_PACK_BMS_MIN_CELL_VOLTAGE);
     uint16_t max_cell_voltage = (uint16_t)(g_bms.max_voltage * PACK_COEFF_PACK_BMS_MAX_CELL_VOLTAGE);
-    uint8_t max_temp = (uint8_t)(g_bms.max_therm_temp);
-    uint8_t avg_temp = (uint8_t)(g_bms.avg_therm_temp);
+    uint8_t max_temp = (uint8_t)CLAMP(g_bms.max_therm_temp, 0, UINT8_MAX);
+    uint8_t avg_temp = (uint8_t)CLAMP(g_bms.avg_therm_temp, 0, UINT8_MAX);
     CAN_SEND_pack_bms(pack_voltage, min_cell_voltage, max_cell_voltage, max_temp, avg_temp);
     CAN_SEND_pack_bms_ccan(pack_voltage, min_cell_voltage, max_cell_voltage, max_temp, avg_temp);
 
