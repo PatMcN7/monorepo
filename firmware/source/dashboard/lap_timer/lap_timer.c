@@ -83,6 +83,11 @@ void lap_timer_periodic(void) {
         case LAP_TIMER_STATE_COMPLETE:
             lap_timer.start_time_ms = xTaskGetTickCount();
             lap_timer.elapsed_time_ms = 0;
+            // start the next lap from here so the finish line is not counted twice
+            lap_timer.last_point = lap_timer_gps_to_local(
+                can_data.gps_coordinates.latitude,
+                can_data.gps_coordinates.longitude
+            );
             lap_timer.state = LAP_TIMER_STATE_TIMING;
             return;
 
@@ -117,10 +122,6 @@ void lap_timer_periodic(void) {
             lap_timer.last_point = current_point;
             return;
         }
-
-        default:
-            lap_timer.state = LAP_TIMER_STATE_IDLE;
-            return;
     }
 }
 
