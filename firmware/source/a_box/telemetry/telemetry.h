@@ -10,6 +10,8 @@
 
 #include <stdint.h>
 
+static constexpr uint32_t BMS_PERIOD_MS = 200;
+
 static constexpr uint32_t TELEMETRY_100HZ_PERIOD_MS = 10;
 void report_telemetry_100hz(void);
 

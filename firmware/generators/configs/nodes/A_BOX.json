@@ -17,8 +17,8 @@
                     "priority": 0
                 },
                 {
-                    "message_name": "pack_stats",
-                    "description": "Pack voltage, current, and temperature",
+                    "message_name": "pack_analog",
+                    "description": "Pack voltage and current from analog readings",
                     "signals": [
                         {
                             "signal_name": "pack_voltage",
@@ -33,12 +33,135 @@
                             "data_type": "int16_t",
                             "unit": "A",
                             "scale": 0.1
+                        }
+                    ],
+                    "priority": 5,
+                    "period_ms": 10
+                },
+                {
+                    "message_name": "pack_bms",
+                    "description": "Voltages and temperatures from BMS",
+                    "signals": [
+                        {
+                            "signal_name": "pack_voltage",
+                            "description": "Total pack voltage",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "min_cell_voltage",
+                            "description": "Minimum cell voltage in the pack",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "max_cell_voltage",
+                            "description": "Maximum cell voltage in the pack",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
                         },
                         {
                             "signal_name": "max_temp",
                             "description": "Max thermistor reading in the pack",
-                            "data_type": "int16_t",
+                            "data_type": "uint8_t",
                             "unit": "C"
+                        },
+                        {
+                            "signal_name": "avg_temp",
+                            "description": "Average thermistor reading in the pack",
+                            "data_type": "uint8_t",
+                            "unit": "C"
+                        }
+                    ],
+                    "priority": 1,
+                    "period_ms": 200
+                },
+                {
+                    "message_name": "bms_pecs",
+                    "description": "PEC statuses from BMS",
+                    "signals": [
+                        {
+                            "signal_name": "RDCV_0_PEC",
+                            "description": "High if the RDCV (cell voltage) group A (0) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_1_PEC",
+                            "description": "High if the RDCV (cell voltage) group B (1) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_2_PEC",
+                            "description": "High if the RDCV (cell voltage) group C (2) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_3_PEC",
+                            "description": "High if the RDCV (cell voltage) group D (3) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_4_PEC",
+                            "description": "High if the RDCV (cell voltage) group E (4) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_5_PEC",
+                            "description": "High if the RDCV (cell voltage) group F (5) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_0_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group A (0) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_1_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group B (1) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_2_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group C (2) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_3_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group D (3) PEC is invalid",
+                            "data_type": "bool"
+                        }
+                    ],
+                    "priority": 1,
+                    "period_ms": 200
+                },
+                {
+                    "message_name": "cell_telemetry",
+                    "description": "Individual cell voltages and balancing status",
+                    "signals": [
+                        {
+                            "signal_name": "voltage",
+                            "description": "individual cell voltage",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "module_num",
+                            "description": "Module number of the cell being reported, 0 indexed",
+                            "data_type": "uint8_t"
+                        },
+                        {
+                            "signal_name": "cell_num",
+                            "description": "Cell number within the module, 0 indexed",
+                            "data_type": "uint8_t"
+                        },
+                        {
+                            "signal_name": "balance_status",
+                            "description": "Whether the cell is currently being balanced",
+                            "data_type": "bool"
                         }
                     ],
                     "priority": 5,
@@ -132,42 +255,6 @@
                     "period_ms": 1000
                 },
                 {
-                    "message_name": "charging_telemetry",
-                    "description": "Reported battery stats during charging",
-                    "signals": [
-                        {
-                            "signal_name": "pack_voltage",
-                            "description": "Total pack voltage",
-                            "data_type": "uint16_t",
-                            "unit": "V",
-                            "scale": 0.01
-                        },
-                        {
-                            "signal_name": "pack_current",
-                            "description": "Total pack current, positive is discharge",
-                            "data_type": "int16_t",
-                            "unit": "A",
-                            "scale": 0.1
-                        },
-                        {
-                            "signal_name": "min_cell_voltage",
-                            "description": "Minimum cell voltage in the pack",
-                            "data_type": "uint16_t",
-                            "unit": "V",
-                            "scale": 0.01
-                        },
-                        {
-                            "signal_name": "max_cell_voltage",
-                            "description": "Maximum cell voltage in the pack",
-                            "data_type": "uint16_t",
-                            "unit": "V",
-                            "scale": 0.01
-                        }
-                    ],
-                    "priority": 5,
-                    "period_ms": 10
-                },
-                {
                     "message_name": "charging_fsm_internals",
                     "description": "Internal states of the charging FSM for debugging purposes",
                     "signals": [
@@ -200,7 +287,128 @@
                     "period_ms": 1000
                 },
                 {
-                    "message_name": "cell_telemetry",
+                    "message_name": "pack_analog_ccan",
+                    "description": "Pack voltage and current from analog readings",
+                    "signals": [
+                        {
+                            "signal_name": "pack_voltage",
+                            "description": "Total pack voltage",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "pack_current",
+                            "description": "Total pack current, positive is discharge",
+                            "data_type": "int16_t",
+                            "unit": "A",
+                            "scale": 0.1
+                        }
+                    ],
+                    "priority": 5,
+                    "period_ms": 10
+                },
+                {
+                    "message_name": "pack_bms_ccan",
+                    "description": "Voltages and temperatures from BMS",
+                    "signals": [
+                        {
+                            "signal_name": "pack_voltage",
+                            "description": "Total pack voltage",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "min_cell_voltage",
+                            "description": "Minimum cell voltage in the pack",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "max_cell_voltage",
+                            "description": "Maximum cell voltage in the pack",
+                            "data_type": "uint16_t",
+                            "unit": "V",
+                            "scale": 0.01
+                        },
+                        {
+                            "signal_name": "max_temp",
+                            "description": "Max thermistor reading in the pack",
+                            "data_type": "uint8_t",
+                            "unit": "C"
+                        },
+                        {
+                            "signal_name": "avg_temp",
+                            "description": "Average thermistor reading in the pack",
+                            "data_type": "uint8_t",
+                            "unit": "C"
+                        }
+                    ],
+                    "priority": 1,
+                    "period_ms": 200
+                },
+                {
+                    "message_name": "bms_pecs_ccan",
+                    "description": "PEC statuses from BMS",
+                    "signals": [
+                        {
+                            "signal_name": "RDCV_0_PEC",
+                            "description": "High if the RDCV (cell voltage) group A (0) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_1_PEC",
+                            "description": "High if the RDCV (cell voltage) group B (1) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_2_PEC",
+                            "description": "High if the RDCV (cell voltage) group C (2) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_3_PEC",
+                            "description": "High if the RDCV (cell voltage) group D (3) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_4_PEC",
+                            "description": "High if the RDCV (cell voltage) group E (4) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDCV_5_PEC",
+                            "description": "High if the RDCV (cell voltage) group F (5) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_0_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group A (0) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_1_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group B (1) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_2_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group C (2) PEC is invalid",
+                            "data_type": "bool"
+                        },
+                        {
+                            "signal_name": "RDAUX_3_PEC",
+                            "description": "High if the RDAUX (GPIO voltage) group D (3) PEC is invalid",
+                            "data_type": "bool"
+                        }
+                    ],
+                    "priority": 1,
+                    "period_ms": 200
+                },
+                {
+                    "message_name": "cell_telemetry_ccan",
                     "description": "Individual cell voltages and balancing status",
                     "signals": [
                         {

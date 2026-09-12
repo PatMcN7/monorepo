@@ -286,7 +286,10 @@
                     "message_name": "steering_angle"
                 },
                 {
-                    "message_name": "pack_stats"
+                    "message_name": "pack_bms"
+                },
+                {
+                    "message_name": "pack_analog"
                 },
                 {
                     "message_name": "wheel_speeds"

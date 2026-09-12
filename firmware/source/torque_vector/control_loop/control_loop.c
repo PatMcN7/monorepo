@@ -117,7 +117,7 @@ void control_loop() {
     xVCU.BRAKE_RAW = can_data.pedals.brake / 100.0f;
 
     xVCU.ST_RAW = can_data.steering_angle.angle * UNPACK_COEFF_STEERING_ANGLE_ANGLE * -1;
-    xVCU.VB_RAW = can_data.pack_stats.pack_voltage * UNPACK_COEFF_PACK_STATS_PACK_VOLTAGE;
+    xVCU.VB_RAW = can_data.pack_bms.pack_voltage * UNPACK_COEFF_PACK_BMS_PACK_VOLTAGE;
     static constexpr float RPM_TO_RADS = 2.0f * 3.14f / 60.0f;
     xVCU.WM_RAW[0] = can_data.wheel_speeds.front_left * RPM_TO_RADS;
     xVCU.WM_RAW[1] = can_data.wheel_speeds.front_right * RPM_TO_RADS;
@@ -129,7 +129,7 @@ void control_loop() {
     xVCU.AV_RAW[0] = imu_data.gyro_x * DEG_TO_RAD;
     xVCU.AV_RAW[1] = imu_data.gyro_y * DEG_TO_RAD;
     xVCU.AV_RAW[2] = imu_data.gyro_z * DEG_TO_RAD;
-    xVCU.IB_RAW = can_data.pack_stats.pack_current * UNPACK_COEFF_PACK_STATS_PACK_CURRENT;
+    xVCU.IB_RAW = can_data.pack_analog.pack_current * UNPACK_COEFF_PACK_ANALOG_PACK_CURRENT;
 
     int16_t max_motor_temp = MAXOF(
         can_data.motor_temps.front_right,

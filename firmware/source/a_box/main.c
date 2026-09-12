@@ -19,6 +19,7 @@
 #include "common/phal_G4/gpio/gpio.h"
 #include "common/phal_G4/rcc/rcc.h"
 #include "common/phal_G4/pin_defs/g474ret6.h"
+#include "common/utils/clamp.h"
 
 /* Module Includes */
 #include "adbms.h"
@@ -120,7 +121,7 @@ void bms_task(void);
 
 // Thread Defines
 DEFINE_CAN_TASKS();
-RTOS_DEFINE_TASK(bms_task, 200, TASK_PRIORITY_NORMAL, STACK_2048);
+RTOS_DEFINE_TASK(bms_task, BMS_PERIOD_MS, TASK_PRIORITY_NORMAL, STACK_2048);
 RTOS_DEFINE_TASK(charging_fsm_periodic, ELCON_COMMAND_PERIOD_MS, TASK_PRIORITY_NORMAL, STACK_512);
 RTOS_DEFINE_TASK(fault_library_periodic, A_BOX_FAULT_SYNC_PERIOD_MS, TASK_PRIORITY_NORMAL, STACK_1024);
 RTOS_DEFINE_TASK(report_telemetry_100hz, TELEMETRY_100HZ_PERIOD_MS, TASK_PRIORITY_LOW, STACK_512);
@@ -175,6 +176,10 @@ int main(void) {
     return 0;
 }
 
+static_assert(PACK_BMS_PERIOD_MS == BMS_PERIOD_MS);
+static_assert(PACK_BMS_CCAN_PERIOD_MS == BMS_PERIOD_MS);
+static_assert(BMS_PECS_PERIOD_MS == BMS_PERIOD_MS);
+static_assert(BMS_PECS_CCAN_PERIOD_MS == BMS_PERIOD_MS);
 void bms_task(void) {
     // IMD
     bool imd_faulted = PHAL_GPIO_read(IMD_STATUS_PORT, IMD_STATUS_PIN) == false;
@@ -182,6 +187,40 @@ void bms_task(void) {
 
     // ADBMS
     adbms_periodic(&g_bms, MIN_V_FOR_BALANCE, MIN_DELTA_FOR_BALANCE);
+
+    // CAN
+    uint16_t pack_voltage = (uint16_t)(g_bms.sum_voltage * PACK_COEFF_PACK_BMS_PACK_VOLTAGE);
+    uint16_t min_cell_voltage = (uint16_t)(g_bms.min_voltage * PACK_COEFF_PACK_BMS_MIN_CELL_VOLTAGE);
+    uint16_t max_cell_voltage = (uint16_t)(g_bms.max_voltage * PACK_COEFF_PACK_BMS_MAX_CELL_VOLTAGE);
+    uint8_t max_temp = (uint8_t)CLAMP(g_bms.max_therm_temp, 0, UINT8_MAX);
+    uint8_t avg_temp = (uint8_t)CLAMP(g_bms.avg_therm_temp, 0, UINT8_MAX);
+    CAN_SEND_pack_bms(pack_voltage, min_cell_voltage, max_cell_voltage, max_temp, avg_temp);
+    CAN_SEND_pack_bms_ccan(pack_voltage, min_cell_voltage, max_cell_voltage, max_temp, avg_temp);
+
+    CAN_SEND_bms_pecs(
+        g_bms.err_cell_voltage_pecs[0],
+        g_bms.err_cell_voltage_pecs[1],
+        g_bms.err_cell_voltage_pecs[2],
+        g_bms.err_cell_voltage_pecs[3],
+        g_bms.err_cell_voltage_pecs[4],
+        g_bms.err_cell_voltage_pecs[5],
+        g_bms.err_gpio_voltage_pecs[0],
+        g_bms.err_gpio_voltage_pecs[1],
+        g_bms.err_gpio_voltage_pecs[2],
+        g_bms.err_gpio_voltage_pecs[3]
+    );
+    CAN_SEND_bms_pecs_ccan(
+        g_bms.err_cell_voltage_pecs[0],
+        g_bms.err_cell_voltage_pecs[1],
+        g_bms.err_cell_voltage_pecs[2],
+        g_bms.err_cell_voltage_pecs[3],
+        g_bms.err_cell_voltage_pecs[4],
+        g_bms.err_cell_voltage_pecs[5],
+        g_bms.err_gpio_voltage_pecs[0],
+        g_bms.err_gpio_voltage_pecs[1],
+        g_bms.err_gpio_voltage_pecs[2],
+        g_bms.err_gpio_voltage_pecs[3]
+    );
 
     bool is_bms_disconnected = g_bms.state != ADBMS_STATE_CONNECTED;
     update_fault(FAULT_ID_BMS_DISCONNECTED, is_bms_disconnected);
