@@ -6,7 +6,7 @@ var a__box_2main_8c =
     [ "DEFINE_WATCHDOG_TASK", "a__box_2main_8c.html#a11a067a3a0541dc1ed61e5c9bb7591b5", null ],
     [ "HardFault_Handler", "a__box_2main_8c.html#a2bffc10d5bd4106753b7c30e86903bea", null ],
     [ "main", "a__box_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe", null ],
-    [ "RTOS_DEFINE_TASK", "a__box_2main_8c.html#a79f314a9066513a92d0550e25a8917c2", null ],
+    [ "RTOS_DEFINE_TASK", "a__box_2main_8c.html#a6fe855a5346e11fef18f35f17cfbe065", null ],
     [ "RTOS_DEFINE_TASK", "a__box_2main_8c.html#af7c8edeab73fafe8358e31ee43064c01", null ],
     [ "RTOS_DEFINE_TASK", "a__box_2main_8c.html#a820c8a4001c9cc5a0c90cbd0a6a5bf25", null ],
     [ "RTOS_DEFINE_TASK", "a__box_2main_8c.html#a82fe837997b54030e3e2773da5e6dba5", null ],
