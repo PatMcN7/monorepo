@@ -184,7 +184,7 @@ void bms_task(void) {
     adbms_periodic(&g_bms, MIN_V_FOR_BALANCE, MIN_DELTA_FOR_BALANCE);
 
     // CAN
-    uint16_t pack_voltage = (uint16_t)(g_bms.sum_voltage * PACK_COEFF_PACK_ANALOG_PACK_VOLTAGE);
+    uint16_t pack_voltage = (uint16_t)(g_bms.sum_voltage * PACK_COEFF_PACK_BMS_PACK_VOLTAGE);
     uint16_t min_cell_voltage = (uint16_t)(g_bms.min_voltage * PACK_COEFF_PACK_BMS_MIN_CELL_VOLTAGE);
     uint16_t max_cell_voltage = (uint16_t)(g_bms.max_voltage * PACK_COEFF_PACK_BMS_MAX_CELL_VOLTAGE);
     uint8_t max_temp = (uint8_t)(g_bms.max_therm_temp);
