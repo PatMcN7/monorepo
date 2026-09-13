@@ -1,0 +1,37 @@
+<map id="firmware/source/dashboard/lap_timer/lap_timer.c" name="firmware/source/dashboard/lap_timer/lap_timer.c">
+<area shape="rect" id="Node000001" title="DASHBOARD lap timer task implementations." alt="" coords="385,5,562,46"/>
+<area shape="rect" id="Node000002" href="$lap__timer_8h.html" title="DASHBOARD lap timer task implementations." alt="" coords="387,102,472,127"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="466,48,445,89,440,87,461,45"/>
+<area shape="rect" id="Node000004" href="$geodetic_8h.html" title="Geodetic coordinate utility header." alt="" coords="262,190,424,216"/>
+<area shape="poly" id="edge13_Node000001_Node000004" title=" " alt="" coords="433,49,403,69,377,96,358,135,348,175,343,174,353,133,373,92,400,65,430,44"/>
+<area shape="rect" id="Node000006" href="$linear__algebra_8h.html" title="Linear algebra functions utility header." alt="" coords="441,271,575,312"/>
+<area shape="poly" id="edge20_Node000001_Node000006" title=" " alt="" coords="479,46,487,94,507,255,502,256,482,94,474,47"/>
+<area shape="rect" id="Node000008" href="$faults__common_8h.html" title="Event&#45;based FIDR system." alt="" coords="146,94,265,135"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="413,49,281,92,279,87,412,44"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="745,94,890,135"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="553,44,731,89,730,94,551,49"/>
+<area shape="rect" id="Node000011" href="$geometry_8h.html" title="Planar computational geometry utility header." alt="" coords="554,102,721,127"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="512,44,602,92,600,96,509,49"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="174,190,237,216"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="396,130,250,185,248,186,246,181,249,180,395,125"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="419,130,367,181,363,178,416,126"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="437,127,496,256,491,258,432,129"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="343,360,404,386"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="321,219,291,241,277,256,267,272,261,292,267,311,279,326,294,339,330,357,327,362,291,343,275,330,262,313,255,292,262,270,273,252,287,237,318,214"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="367,214,459,262,456,266,365,219"/>
+<area shape="rect" id="Node000007" href="$units_8h.html" title="SI and Imperial unit defs and conversion functions." alt="" coords="276,279,418,304"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="346,216,348,263,343,263,341,216"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="476,315,409,354,406,349,473,310"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="208,135,208,175,203,175,203,135"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,183,150,223"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="178,137,120,176,117,172,175,133"/>
+<area shape="poly" id="edge17_Node000011_Node000006" title=" " alt="" coords="631,129,534,260,529,257,626,126"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="601,190,674,216"/>
+<area shape="poly" id="edge15_Node000011_Node000012" title=" " alt="" coords="640,128,640,174,635,174,635,128"/>
+<area shape="rect" id="Node000013" href="$abs_8h.html" title="Absolute value functions utility header." alt="" coords="698,190,833,216"/>
+<area shape="poly" id="edge16_Node000011_Node000013" title=" " alt="" coords="657,125,736,179,733,183,654,130"/>
+<area shape="rect" id="Node000014" href="$max_8h.html" title="Maximum value functions utility header." alt="" coords="857,190,994,216"/>
+<area shape="poly" id="edge18_Node000011_Node000014" title=" " alt="" coords="679,125,871,183,870,188,677,130"/>
+<area shape="rect" id="Node000015" href="$min_8h.html" title="Minimum value functions utility header." alt="" coords="1018,190,1153,216"/>
+<area shape="poly" id="edge19_Node000011_Node000015" title=" " alt="" coords="698,125,734,132,871,155,1007,180,1023,183,1022,189,1006,185,870,160,733,137,697,130"/>
+</map>

@@ -1,25 +1,38 @@
 <map id="firmware/source/dashboard/driver_interface/pages/race.c" name="firmware/source/dashboard/driver_interface/pages/race.c">
-<area shape="rect" id="Node000001" title="Race page implementation." alt="" coords="233,5,426,46"/>
+<area shape="rect" id="Node000001" title="Race page implementation." alt="" coords="269,5,462,46"/>
 <area shape="rect" id="Node000002" href="$race_8h.html" title="Race page implementation." alt="" coords="5,94,62,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,49,78,96,76,91,252,44"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="275,49,78,96,76,91,274,44"/>
 <area shape="rect" id="Node000003" href="$nextion_8h.html" title="Nextion display driver interface." alt="" coords="85,94,256,120"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,49,210,89,207,84,289,44"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="249,168,394,208"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="328,47,321,94,321,152,316,152,316,94,323,46"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="318,49,216,90,214,85,316,44"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="239,168,383,208"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="350,48,334,70,321,95,314,124,312,152,307,152,309,123,316,93,330,67,346,45"/>
 <area shape="rect" id="Node000008" href="$pedals_8h.html" title=" " alt="" coords="331,94,400,120"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="341,45,356,78,351,81,336,48"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="368,46,368,78,363,78,363,46"/>
 <area shape="rect" id="Node000009" href="$max_8h.html" title="Maximum value functions utility header." alt="" coords="425,94,562,120"/>
-<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="372,44,456,85,454,89,369,49"/>
-<area shape="rect" id="Node000010" href="$colors_8h.html" title="Color definitions for LCD display." alt="" coords="531,175,597,201"/>
-<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="427,39,517,60,554,75,577,92,585,109,586,127,579,162,573,161,581,127,580,110,573,96,551,79,515,65,425,44"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="299,256,362,282"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,118,203,160,239,206,266,228,295,246,292,251,263,233,236,210,198,163,174,121"/>
-<area shape="rect" id="Node000005" href="$strbuf_8h.html" title="Fixed&#45;size string builder. Useful for building large CMD strings before transmission." alt="" coords="111,175,175,201"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="169,121,155,161,150,159,164,119"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="173,199,289,248,287,253,171,204"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="109,256,176,282"/>
-<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="146,201,146,240,140,240,140,201"/>
-<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="379,118,393,136,405,159,412,184,408,209,391,232,370,250,367,246,387,229,403,207,407,184,400,161,388,139,375,122"/>
-<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="361,121,342,156,337,153,356,119"/>
-<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="532,203,378,255,377,250,530,198"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="399,44,463,83,460,88,396,49"/>
+<area shape="rect" id="Node000010" href="$colors_8h.html" title="Color definitions for LCD display." alt="" coords="458,175,524,201"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="463,31,494,39,526,51,554,69,577,92,582,103,583,115,573,136,554,154,531,169,528,165,551,150,569,132,578,114,577,105,573,96,550,73,523,56,493,44,461,36"/>
+<area shape="rect" id="Node000011" href="$lap__timer_8h.html" title="DASHBOARD lap timer task implementations." alt="" coords="638,94,722,120"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="445,44,623,89,622,94,443,49"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="388,264,452,290"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,119,195,162,209,186,229,206,263,229,301,246,374,266,373,271,299,251,260,234,225,210,205,189,190,164,172,121"/>
+<area shape="rect" id="Node000005" href="$strbuf_8h.html" title="Fixed&#45;size string builder. Useful for building large CMD strings before transmission." alt="" coords="100,175,164,201"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="167,121,147,162,142,160,163,119"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="164,199,184,206,374,261,373,266,182,211,162,204"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="98,264,166,290"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="135,201,135,248,130,248,130,201"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="375,119,397,167,410,210,418,249,413,250,405,211,392,169,370,121"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="359,122,335,157,331,154,355,119"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="483,203,442,253,438,250,479,200"/>
+<area shape="poly" id="edge15_Node000011_Node000004" title=" " alt="" coords="661,123,588,170,538,211,458,258,456,254,535,206,585,166,658,118"/>
+<area shape="rect" id="Node000012" href="$geodetic_8h.html" title="Geodetic coordinate utility header." alt="" coords="599,175,761,201"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="683,120,683,159,678,159,678,120"/>
+<area shape="rect" id="Node000014" href="$linear__algebra_8h.html" title="Linear algebra functions utility header." alt="" coords="764,256,898,297"/>
+<area shape="poly" id="edge21_Node000011_Node000014" title=" " alt="" coords="708,118,742,138,775,166,802,203,821,241,816,243,798,206,772,169,739,142,705,123"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="666,345,726,371"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="652,204,617,225,601,240,589,258,583,277,589,296,601,311,617,324,652,342,650,347,614,328,598,315,584,298,578,277,584,255,597,237,614,221,649,199"/>
+<area shape="poly" id="edge18_Node000012_Node000014" title=" " alt="" coords="702,199,785,246,782,251,700,204"/>
+<area shape="rect" id="Node000015" href="$units_8h.html" title="SI and Imperial unit defs and conversion functions." alt="" coords="599,264,740,290"/>
+<area shape="poly" id="edge20_Node000012_Node000015" title=" " alt="" coords="681,202,675,249,670,248,676,201"/>
+<area shape="poly" id="edge19_Node000014_Node000013" title=" " alt="" coords="799,300,731,339,729,334,796,295"/>
 </map>

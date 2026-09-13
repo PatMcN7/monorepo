@@ -8,6 +8,7 @@ var dashboard_2main_8c =
     [ "main", "dashboard_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe", null ],
     [ "RTOS_DEFINE_TASK", "dashboard_2main_8c.html#a0bbf8961f03632ac2f8cf77ef5399077", null ],
     [ "RTOS_DEFINE_TASK", "dashboard_2main_8c.html#a9b60bc67cbeaf955828245bf3832b747", null ],
+    [ "RTOS_DEFINE_TASK", "dashboard_2main_8c.html#a73dc496c1c425cc288e825a44db847bd", null ],
     [ "RTOS_DEFINE_TASK", "dashboard_2main_8c.html#a8a6793195dfc8b6359030a5aad38dd8c", null ],
     [ "RTOS_DEFINE_TASK", "dashboard_2main_8c.html#a82fe837997b54030e3e2773da5e6dba5", null ],
     [ "service_start_button", "dashboard_2main_8c.html#a18c3e1428bba19774305c0d3b3b97942", null ],

@@ -1,5 +1,18 @@
 <map id="firmware/common/utils/units.h" name="firmware/common/utils/units.h">
-<area shape="rect" id="Node000001" title="SI and Imperial unit defs and conversion functions." alt="" coords="6,5,158,46"/>
-<area shape="rect" id="Node000002" href="$imu_8c.html" title="IMU calibration and coordinate transformations." alt="" coords="5,94,159,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,62,85,94,79,94,79,62"/>
+<area shape="rect" id="Node000001" title="SI and Imperial unit defs and conversion functions." alt="" coords="206,5,358,46"/>
+<area shape="rect" id="Node000002" href="$geodetic_8h.html" title="Geodetic coordinate utility header." alt="" coords="118,94,270,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,59,216,95,212,92,249,55"/>
+<area shape="rect" id="Node000008" href="$imu_8c.html" title="IMU calibration and coordinate transformations." alt="" coords="295,94,448,135"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="315,55,353,92,349,95,311,59"/>
+<area shape="rect" id="Node000003" href="$lap__timer_8c.html" title="DASHBOARD lap timer task implementations." alt="" coords="5,279,183,320"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,150,107,280,102,277,174,147"/>
+<area shape="rect" id="Node000004" href="$lap__timer_8h.html" title="DASHBOARD lap timer task implementations." alt="" coords="207,183,384,223"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="230,143,274,180,271,184,227,147"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="240,233,137,281,135,276,238,228"/>
+<area shape="rect" id="Node000005" href="$driver__interface_8c.html" title="thread to manage driver&#45;facing LCD, buttons, LEDs" alt="" coords="207,271,384,327"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="298,239,298,271,293,271,293,239"/>
+<area shape="rect" id="Node000006" href="$race_8c.html" title="Race page implementation." alt="" coords="408,279,601,320"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="354,228,462,276,460,281,352,232"/>
+<area shape="rect" id="Node000007" href="$dashboard_2main_8c.html" title="&quot;Dashboard&quot; node source code" alt="" coords="625,279,803,320"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="400,222,613,269,641,276,640,281,612,274,399,228"/>
 </map>

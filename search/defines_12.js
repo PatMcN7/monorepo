@@ -33,11 +33,9 @@ var searchData=
   ['tsal_5frtm_5fenable_5fport_30',['TSAL_RTM_ENABLE_PORT',['../main__module_2main_8h.html#a274350ceee72215b8388bbe2c9cbdb54',1,'main.h']]],
   ['tv1_5fminus_5fpin_31',['TV1_MINUS_PIN',['../dashboard_2main_8h.html#a066756c6be4dea791982891445aa58ad',1,'main.h']]],
   ['tv1_5fminus_5fport_32',['TV1_MINUS_PORT',['../dashboard_2main_8h.html#a7c58c4c4eab42860bb3ba131bdb36d8c',1,'main.h']]],
-  ['tv1_5fplus_5fpin_33',['TV1_PLUS_PIN',['../dashboard_2main_8h.html#a060409d0e1c57a76e1488763a5569dc7',1,'main.h']]],
-  ['tv1_5fplus_5fport_34',['TV1_PLUS_PORT',['../dashboard_2main_8h.html#afbd235e96fd9d2eb9631e648e5595d2c',1,'main.h']]],
-  ['tv_5fbutton_35',['TV_BUTTON',['../dashboard_2driver__interface_2pages_2vcu_8h.html#a26bda9f3f6a5e78cc76c04562d37096d',1,'vcu.h']]],
-  ['tv_5fctrl_5fgpio_5fport_36',['TV_CTRL_GPIO_Port',['../pdu_2main_8h.html#a4d36dfffbdc99145390b7b098d6cada2',1,'main.h']]],
-  ['tv_5fctrl_5fpin_37',['TV_CTRL_Pin',['../pdu_2main_8h.html#abebd218d97f85573e398be66dfe6c7f1',1,'main.h']]],
-  ['tv_5fnflt_5fgpio_5fport_38',['TV_NFLT_GPIO_Port',['../pdu_2main_8h.html#a82d44aadc6fc1c5b1fb86e294fe84c44',1,'main.h']]],
-  ['tv_5fnflt_5fpin_39',['TV_NFLT_Pin',['../pdu_2main_8h.html#a55b6261fb3f492357e7142d06eb436aa',1,'main.h']]]
+  ['tv_5fbutton_33',['TV_BUTTON',['../dashboard_2driver__interface_2pages_2vcu_8h.html#a26bda9f3f6a5e78cc76c04562d37096d',1,'vcu.h']]],
+  ['tv_5fctrl_5fgpio_5fport_34',['TV_CTRL_GPIO_Port',['../pdu_2main_8h.html#a4d36dfffbdc99145390b7b098d6cada2',1,'main.h']]],
+  ['tv_5fctrl_5fpin_35',['TV_CTRL_Pin',['../pdu_2main_8h.html#abebd218d97f85573e398be66dfe6c7f1',1,'main.h']]],
+  ['tv_5fnflt_5fgpio_5fport_36',['TV_NFLT_GPIO_Port',['../pdu_2main_8h.html#a82d44aadc6fc1c5b1fb86e294fe84c44',1,'main.h']]],
+  ['tv_5fnflt_5fpin_37',['TV_NFLT_Pin',['../pdu_2main_8h.html#a55b6261fb3f492357e7142d06eb436aa',1,'main.h']]]
 ];

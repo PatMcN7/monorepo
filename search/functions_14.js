@@ -12,7 +12,18 @@ var searchData=
   ['vcu_5ftoggle_5fregen_9',['vcu_toggle_regen',['../vcu_8c.html#aad23511a3a78342b43962d7c16820964',1,'vcu_toggle_regen(void):&#160;vcu.c'],['../dashboard_2driver__interface_2pages_2vcu_8h.html#aad23511a3a78342b43962d7c16820964',1,'vcu_toggle_regen(void):&#160;vcu.c']]],
   ['vcu_5fupdate_10',['vcu_update',['../vcu_8c.html#ad25ad6fc91aa0798a1862730aaef4452',1,'vcu_update(void):&#160;vcu.c'],['../dashboard_2driver__interface_2pages_2vcu_8h.html#ad25ad6fc91aa0798a1862730aaef4452',1,'vcu_update(void):&#160;vcu.c']]],
   ['vcu_5fwheel_5fadjust_11',['vcu_wheel_adjust',['../vcu_8c.html#a151705cf194320d602ae7dc3e2e25a8e',1,'vcu_wheel_adjust(bool is_right_wheel, int8_t delta):&#160;vcu.c'],['../dashboard_2driver__interface_2pages_2vcu_8h.html#a151705cf194320d602ae7dc3e2e25a8e',1,'vcu_wheel_adjust(bool is_right_wheel, int8_t delta):&#160;vcu.c']]],
-  ['vector3_5fmagnitude_12',['vector3_magnitude',['../linear__algebra_8h.html#acb3467d45efe252749a36d093d6d575d',1,'linear_algebra.h']]],
-  ['vector3_5fnormalize_13',['vector3_normalize',['../linear__algebra_8h.html#a93c54d7aa80562d69744ad203cdc698d',1,'linear_algebra.h']]],
-  ['vehicle_5ffsm_5fperiodic_14',['vehicle_fsm_periodic',['../vehicle__fsm_8c.html#a17b274e6971a721080e708c8d6eed884',1,'vehicle_fsm_periodic(void):&#160;vehicle_fsm.c'],['../vehicle__fsm_8h.html#a17b274e6971a721080e708c8d6eed884',1,'vehicle_fsm_periodic(void):&#160;vehicle_fsm.c']]]
+  ['vector2_5fadd_12',['vector2_add',['../linear__algebra_8h.html#aa7300726a97d3b54a88218b1d5874f9a',1,'linear_algebra.h']]],
+  ['vector2_5fcross_13',['vector2_cross',['../linear__algebra_8h.html#a24e6804e26c8b9048d77319bb3d0dcb9',1,'linear_algebra.h']]],
+  ['vector2_5fdistance_14',['vector2_distance',['../linear__algebra_8h.html#a72d10b6160875b23b398cfef9e98a361',1,'linear_algebra.h']]],
+  ['vector2_5fdot_15',['vector2_dot',['../linear__algebra_8h.html#a4dfc9ca72f192a8cac898294b2e3d95d',1,'linear_algebra.h']]],
+  ['vector2_5fmagnitude_16',['vector2_magnitude',['../linear__algebra_8h.html#a6f4c78f15b63d790c3bb5dbed5c71261',1,'linear_algebra.h']]],
+  ['vector2_5fmidpoint_17',['vector2_midpoint',['../linear__algebra_8h.html#a8575fb293573e4a074fc3182529502ad',1,'linear_algebra.h']]],
+  ['vector2_5fnormalize_18',['vector2_normalize',['../linear__algebra_8h.html#a5752304986a3ca63d99299cb346b1542',1,'linear_algebra.h']]],
+  ['vector2_5fperpendicular_19',['vector2_perpendicular',['../linear__algebra_8h.html#a18ba363054c85a04d9a933b3fa6201c9',1,'linear_algebra.h']]],
+  ['vector2_5fscale_20',['vector2_scale',['../linear__algebra_8h.html#a2e3b62828b3589791a542b58ac32e146',1,'linear_algebra.h']]],
+  ['vector2_5fsub_21',['vector2_sub',['../linear__algebra_8h.html#a1ebccdd0fce0cdfa7a931095189887b4',1,'linear_algebra.h']]],
+  ['vector2_5fwinding_22',['vector2_winding',['../geometry_8h.html#a6e735b8719acb9be09a8055f5a1cdff5',1,'geometry.h']]],
+  ['vector3_5fmagnitude_23',['vector3_magnitude',['../linear__algebra_8h.html#acb3467d45efe252749a36d093d6d575d',1,'linear_algebra.h']]],
+  ['vector3_5fnormalize_24',['vector3_normalize',['../linear__algebra_8h.html#a93c54d7aa80562d69744ad203cdc698d',1,'linear_algebra.h']]],
+  ['vehicle_5ffsm_5fperiodic_25',['vehicle_fsm_periodic',['../vehicle__fsm_8c.html#a17b274e6971a721080e708c8d6eed884',1,'vehicle_fsm_periodic(void):&#160;vehicle_fsm.c'],['../vehicle__fsm_8h.html#a17b274e6971a721080e708c8d6eed884',1,'vehicle_fsm_periodic(void):&#160;vehicle_fsm.c']]]
 ];

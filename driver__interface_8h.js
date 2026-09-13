@@ -13,7 +13,7 @@ var driver__interface_8h =
       [ "RIGHT_WHEEL_MINUS", "driver__interface_8h.html#a229e398c86c302f6e87d5be9a8570f89aaee4e4cf77019b99d8b6bbfda0423e7c", null ],
       [ "RIGHT_WHEEL_PLUS", "driver__interface_8h.html#a229e398c86c302f6e87d5be9a8570f89aaf110a6b743f22281450f8e7d0696098", null ],
       [ "LEFT_WHEEL_MINUS", "driver__interface_8h.html#a229e398c86c302f6e87d5be9a8570f89a69fc3849bd83612dc3ff52d4accd7f86", null ],
-      [ "LEFT_WHEEL_PLUS", "driver__interface_8h.html#a229e398c86c302f6e87d5be9a8570f89a1cf807745c1aa5b2e6c3ad9c9c79c2af", null ]
+      [ "LAP_SET", "driver__interface_8h.html#a229e398c86c302f6e87d5be9a8570f89a0b370541695851f971ea09a2bd35bc1a", null ]
     ] ],
     [ "driver_interface_state_t", "driver__interface_8h.html#a0b28b74cdc60e16623b48a65bf3e3f41", [
       [ "DI_STATE_LCD_INIT", "driver__interface_8h.html#a0b28b74cdc60e16623b48a65bf3e3f41a0c135022a7e237a5e97b8d19427863ce", null ],
