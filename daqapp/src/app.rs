@@ -145,8 +145,23 @@ impl DAQApp {
     pub fn handle_action(&mut self, action: action::AppAction, ctx: &egui::Context) {
         match action {
             action::AppAction::SpawnWidget(widget_type) => {
-                let widget = widget_type.create(&mut self.widget_ids, self.ui_to_can_tx.clone());
-                self.add_widget_to_tree(widget);
+                let kind = widget_type.kind();
+                let existing_count = self
+                    .tile_tree
+                    .tiles
+                    .tiles()
+                    .filter(|tile| matches!(tile, egui_tiles::Tile::Pane(w) if w.kind() == kind))
+                    .count();
+                match widget_type.create(
+                    &mut self.widget_ids,
+                    self.ui_to_can_tx.clone(),
+                    existing_count,
+                ) {
+                    Some(widget) => self.add_widget_to_tree(widget),
+                    None => {
+                        log::warn!("Maximum number of {:?} widgets already open", kind)
+                    }
+                }
             }
             action::AppAction::ToggleSidebar => {
                 self.is_sidebar_open = !self.is_sidebar_open;
@@ -210,7 +225,8 @@ impl eframe::App for DAQApp {
                 messages::MsgFromCan::ParsedMessage(_)
                 | messages::MsgFromCan::UnparsedMessage(_)
                 | messages::MsgFromCan::MessageSent { .. }
-                | messages::MsgFromCan::BusLoad { .. } => {
+                | messages::MsgFromCan::BusLoad { .. }
+                | messages::MsgFromCan::Hil(_) => {
                     // Nothing special to do here, the message will be handled
                     // in the individual widgets
                 }
