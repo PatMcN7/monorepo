@@ -5,7 +5,7 @@
         {
             "message_name": "E_METER_MEASUREMENT",
             "description": "Contains current (A) and voltage (V) as measured by the E Meter",
-            "byte_order": "big_endian",
+            "byte_order": "little_endian",
             "signals": [
                 {
                     "signal_name": "current",
@@ -27,7 +27,7 @@
         {
             "message_name": "E_METER_STATUS",
             "description": "Contains violation, logging, and Energy (Whr) status signals.",
-            "byte_order": "big_endian",
+            "byte_order": "little_endian",
             "signals": [
                 {
                     "signal_name": "violation",
@@ -40,10 +40,15 @@
                     "data_type": "bool"
                 },
                 {
-                    "signal_name": "reserved",
-                    "data_type": "uint8_t",
-                    "length": 6
+                    "signal_name": "fault_active",
+                    "description": "True if the E-Meter is currently faulted.",
+                    "data_type": "bool"
                 },
+                {
+                    "signal_name": "fault_prev_active",
+                    "description": "True if the E-Meter was previously faulted.",
+                    "data_type": "bool"
+                }, 
                 {
                     "signal_name": "energy",
                     "description": "Energy as seen by the E-Meter in Watt hours",
@@ -70,7 +75,7 @@
         {
             "message_name": "E_METER_TEMPERATURE",
             "description": "Reports sensor count, minimum and maximum temperatures, and a group of temperature sensors as selected by multiplexor.",
-            "byte_order": "big_endian",
+            "byte_order": "little_endian",
             "signals": [
                 {
                     "signal_name": "multiplexor",
