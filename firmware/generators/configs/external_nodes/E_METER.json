@@ -48,7 +48,19 @@
                     "signal_name": "fault_prev_active",
                     "description": "True if the E-Meter was previously faulted.",
                     "data_type": "bool"
-                }, 
+                },
+                {
+                    "signal_name": "reserved_bool1",
+                    "data_type": "bool"
+                },
+                {
+                    "signal_name": "reserved_bool2",
+                    "data_type": "bool"
+                },
+                {
+                    "signal_name": "reserved_bool3",
+                    "data_type": "bool"
+                },
                 {
                     "signal_name": "energy",
                     "description": "Energy as seen by the E-Meter in Watt hours",
