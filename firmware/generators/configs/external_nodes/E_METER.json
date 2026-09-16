@@ -50,6 +50,10 @@
                     "data_type": "bool"
                 },
                 {
+                    "signal_name": "reserved_bool0",
+                    "data_type": "bool"
+                },
+                {
                     "signal_name": "reserved_bool1",
                     "data_type": "bool"
                 },
